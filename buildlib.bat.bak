@@ -1,0 +1,24 @@
+del *.obj
+
+cl /G5 /Ox /W3 /MT /nologo /Yd /Zi -I. -D_WIN32_WINNT=0x400 -DSTDCALL=_stdcall -c attr.c
+cl /G5 /Ox /W3 /MT /nologo /Yd /Zi -I. -D_WIN32_WINNT=0x400 -DSTDCALL=_stdcall -c cancel.c
+cl /G5 /Ox /W3 /MT /nologo /Yd /Zi -I. -D_WIN32_WINNT=0x400 -DSTDCALL=_stdcall -c cleanup.c
+cl /G5 /Ox /W3 /MT /nologo /Yd /Zi -I. -D_WIN32_WINNT=0x400 -DSTDCALL=_stdcall -c condvar.c
+cl /G5 /Ox /W3 /MT /nologo /Yd /Zi -I. -D_WIN32_WINNT=0x400 -DSTDCALL=_stdcall -c create.c
+cl /G5 /Ox /W3 /MT /nologo /Yd /Zi -I. -D_WIN32_WINNT=0x400 -DSTDCALL=_stdcall -c dll.c
+cl /G5 /Ox /W3 /MT /nologo /Yd /Zi -I. -D_WIN32_WINNT=0x400 -DSTDCALL=_stdcall -c exit.c
+cl /G5 /Ox /W3 /MT /nologo /Yd /Zi -I. -D_WIN32_WINNT=0x400 -DSTDCALL=_stdcall -c fork.c
+cl /G5 /Ox /W3 /MT /nologo /Yd /Zi -I. -D_WIN32_WINNT=0x400 -DSTDCALL=_stdcall -c global.c
+cl /G5 /Ox /W3 /MT /nologo /Yd /Zi -I. -D_WIN32_WINNT=0x400 -DSTDCALL=_stdcall -c misc.c
+cl /G5 /Ox /W3 /MT /nologo /Yd /Zi -I. -D_WIN32_WINNT=0x400 -DSTDCALL=_stdcall -c mutex.c
+cl /G5 /Ox /W3 /MT /nologo /Yd /Zi -I. -D_WIN32_WINNT=0x400 -DSTDCALL=_stdcall -c private.c
+cl /G5 /Ox /W3 /MT /nologo /Yd /Zi -I. -D_WIN32_WINNT=0x400 -DSTDCALL=_stdcall -c sched.c
+cl /G5 /Ox /W3 /MT /nologo /Yd /Zi -I. -D_WIN32_WINNT=0x400 -DSTDCALL=_stdcall -c signal.c
+cl /G5 /Ox /W3 /MT /nologo /Yd /Zi -I. -D_WIN32_WINNT=0x400 -DSTDCALL=_stdcall -c sync.c
+cl /G5 /Ox /W3 /MT /nologo /Yd /Zi -I. -D_WIN32_WINNT=0x400 -DSTDCALL=_stdcall -c tsd.c
+cl /G5 /Ox /W3 /MT /nologo /Yd /Zi -I. -D_WIN32_WINNT=0x400 -DSTDCALL=_stdcall -c semaphore.c
+cl /G5 /Ox /W3 /MT /nologo /Yd /Zi -I. -D_WIN32_WINNT=0x400 -DSTDCALL=_stdcall -c rwlock.c
+
+cl /LD /Zi *.obj /Fepthread.dll /link /nodefaultlib:libcmt /implib:pthread.lib msvcrt.lib /def:pthread.def
+
+

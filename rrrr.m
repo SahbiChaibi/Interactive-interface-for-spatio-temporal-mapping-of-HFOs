@@ -1,0 +1,1 @@
+uicontrol(gcf,'style','text', 'position',[770 ccc 125 15], 'string',ab , 'BackgroundColor',[0 1 0 ])

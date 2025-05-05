@@ -1,0 +1,239 @@
+1999-10-30  Ross Johnson  <rpj@ixobrychus.canberra.edu.au>
+
+	* cancel1.c: New. Test pthread_setcancelstate and
+	pthread_setcanceltype functions.
+	* eyal1.c (waste_time): Change calculation to avoid FP exception
+	on Aplhas
+	- Rich Peters <rpeters@micro-magic.com>
+
+Oct 14 1999  Ross Johnson  <rpj@ixobrychus.canberra.edu.au>
+
+	* condvar7.c: New. Test broadcast after waiting thread is canceled.
+	* condvar8.c: New. Test multiple broadcasts.
+	* condvar9.c: New. Test multiple broadcasts with thread
+	cancelation.
+	
+Sep 16 1999  Ross Johnson  <rpj@ixobrychus.canberra.edu.au>
+
+	* rwlock6.c: New test.
+
+Sep 15 1999  Ross Johnson  <rpj@ixobrychus.canberra.edu.au>
+
+	* rwlock1.c: New test.
+	* rwlock2.c: New test.
+	* rwlock3.c: New test.
+	* rwlock4.c: New test.
+	* rwlock5.c: New test.
+
+Aug 22 1999  Ross Johnson  <rpj@ixobrychus.canberra.edu.au>
+
+	* runall.bat (join2): Add test.
+
+Aug 19 1999  Ross Johnson  <rpj@ixobrychus.canberra.edu.au>
+
+	* join2.c: New test.
+
+Wed Aug 12 1999  Ross Johnson  <rpj@ixobrychus.canberra.edu.au>
+
+	* Makefile (LIBS): Add -L.
+
+Mon May 31 10:25:01 1999  Ross Johnson  <rpj@ixobrychus.canberra.edu.au>
+
+	* Makefile (GLANG): Add GCC language option.
+
+Sat May 29 23:29:04 1999  Ross Johnson  <rpj@ixobrychus.canberra.edu.au>
+
+	* runall.bat (condvar5): Add new test.
+
+	* runall.bat (condvar6): Add new test.
+
+	* Makefile (condvar5) : Add new test.
+	
+	* Makefile (condvar6) : Add new test.
+	
+	* condvar5.c: New test for pthread_cond_broadcast().
+
+	* condvar6.c: New test for pthread_cond_broadcast().
+
+Sun Apr  4 12:04:28 1999  Ross Johnson  <rpj@ixobrychus.canberra.edu.au>
+
+	* tsd1.c (mythread): Change Sleep(0) to sched_yield().
+	(sched.h): Include.
+
+	* condvar3.c (mythread): Remove redundant Sleep().
+
+	* runtest.bat: Re-organised to make more informative.
+
+Fri Mar 19 1999  Ross Johnson  <rpj@ixobrychus.canberra.edu.au>
+
+	* *.bat: redirect unwanted output to nul:
+
+	* runall.bat: new.
+
+	* cancel1.c: new. Not part of suite yet.
+	
+Mon Mar 15 00:17:55 1999  Ross Johnson  <rpj@ixobrychus.canberra.edu.au>
+
+	* mutex1.c: only test mutex init and destroy; add assertions.
+
+	* count1.c: raise number of spawned threads to 60 (appears to
+	be the limit under Win98).
+
+Sun Mar 14 21:31:02 1999  Ross Johnson  <rpj@ixobrychus.canberra.edu.au>
+
+	* test.h (assert): add assertion trace option.
+	Use:
+	"#define ASSERT_TRACE 1" to turn it on,
+	"#define ASSERT_TRACE 0" to turn it off (default).
+
+	* condvar3.c (main): add more assertions.
+
+	* condvar4.c (main): add more assertions.
+
+	* condvar1.c (main): add more assertions.
+
+Fri Mar 12 08:34:15 1999  Ross Johnson  <rpj@ixobrychus.canberra.edu.au>
+
+	* condvar4.c (cvthing): switch the order of the INITIALIZERs.
+
+	* eyal1.c (main): Fix trylock loop; was not waiting for thread to lock
+	the "started" mutex.
+
+Wed Mar 10 10:41:52 1999  Ross Johnson  <rpj@ixobrychus.canberra.edu.au>
+
+	* tryentercs.c: Apply typo patch from bje.
+
+	* tryentercs2.c: Ditto.
+
+Sun Mar  7 10:41:52 1999  Ross Johnson  <rpj@ixobrychus.canberra.edu.au>
+
+	* Makefile (condvar3, condvar4): Add tests.
+
+	* condvar4.c (General): Reduce to simple test case; prerequisite
+	is condvar3.c; add description.
+
+	* condvar3.c (General): Reduce to simple test case; prerequisite
+	is condvar2.c; add description.
+
+	* condvar2.c (General): Reduce to simple test case; prerequisite
+	is condvar1.c; add description.
+
+	* condvar1.c (General): Reduce to simple test case; add
+	description.
+
+	* Template.c (Comments): Add generic test detail.
+
+1999-02-23  Ross Johnson  <rpj@ise.canberra.edu.au>
+
+        * Template.c: Revamp.
+
+        * condvar1.c: Add.
+
+        * condvar2.c: Add.
+
+        * Makefile: Add condvar1 condvar2 tests.
+
+        * exit1.c, exit2.c, exit3.c: Cosmetic changes.
+
+1999-02-23  Ross Johnson  <rpj@ise.canberra.edu.au>
+
+	* Makefile: Some refinement.
+
+	* *.c: More exhaustive checking through assertions; clean up;
+	add some more tests.
+
+	* Makefile: Now actually runs the tests.
+
+	* tests.h: Define our own assert macro. The Mingw32
+	version pops up a dialog but we want to run non-interactively.
+
+	* equal1.c: use assert a little more directly so that it
+	prints the actual call statement.
+
+	* exit1.c: Modify to return 0 on success, 1 on failure.
+
+1999-02-22  Ross Johnson  <rpj@ise.canberra.edu.au>
+
+	* self2.c: Bring up to date.
+
+	* self3.c: Ditto.
+
+1999-02-21  Ben Elliston  <bje@cygnus.com>
+
+	* README: Update.
+
+	* Makefile: New file. Run all tests automatically. Primitive tests
+	are run first; more complex tests are run last.
+
+	* count1.c: New test. Validate the thread count.
+
+	* exit2.c: Perform a simpler test.
+	
+	* exit3.c: New test. Replaces exit2.c, since exit2.c needs to
+	perform simpler checking first.
+
+	* create1.c: Update to use the new testsuite exiting convention.
+	
+	* equal1.c: Likewise.
+
+	* mutex1.c: Likewise.
+
+	* mutex2.c: Likewise.
+
+	* once1.c: Likewise.
+
+	* self2.c: Likewise.
+
+	* self3.c: Likewise.
+
+	* tsd1.c: Likewise.
+
+1999-02-20  Ross Johnson  <rpj@ise.canberra.edu.au>
+
+	* mutex2.c: Test static mutex initialisation.
+
+	* test.h: New. Declares a table mapping error numbers to
+	error names.
+
+1999-01-17  Ross Johnson  <rpj@ise.canberra.edu.au>
+
+	* runtest: New script to build and run a test in the tests directory.
+
+Wed Dec 30 11:22:44 1998  Ross Johnson  <rpj@ixobrychus.canberra.edu.au>
+
+	* tsd1.c: Re-written. See comments at start of file.
+	* Template.c: New. Contains skeleton code and comment template
+	intended to fully document the test.
+
+Fri Oct 16 17:59:49 1998  Ross Johnson  <rpj@swan.canberra.edu.au>
+
+	* tsd1.c (destroy_key): Add function. Change diagnostics.
+
+Thu Oct 15 17:42:37 1998  Ross Johnson  <rpj@swan.canberra.edu.au>
+
+	* tsd1.c (mythread): Fix some casts and add some message
+	output. Fix inverted conditional.
+
+Mon Oct 12 02:12:29 1998  Ross Johnson  <rpj@ixobrychus.canberra.edu.au>
+
+	* tsd1.c: New. Test TSD using 1 key and 2 threads.
+
+1998-09-13  Ben Elliston  <bje@cygnus.com>
+
+	* eyal1.c: New file; contributed by Eyal Lebedinsky
+	<eyal@eyal.emu.id.au>.
+
+1998-09-12  Ben Elliston  <bje@cygnus.com>
+
+	* exit2.c (func): Return a value.
+	(main): Call the right thread entry function.
+
+1998-07-22  Ben Elliston  <bje@cygnus.com>
+
+	* exit2.c (main): Fix size of pthread_t array.
+
+1998-07-10  Ben Elliston  <bje@cygnus.com>
+
+	* exit2.c: New file; test pthread_exit() harder.
+
+	* exit1.c: New file; test pthread_exit().

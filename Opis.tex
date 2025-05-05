@@ -1,0 +1,572 @@
+%% LyX 1.1 created this file.  For more info, see http://www.lyx.org/.
+%% Do not edit unless you really know what you are doing.
+\documentclass[polish]{report}
+\usepackage[T1]{fontenc}
+\usepackage[latin2]{inputenc}
+\usepackage{geometry}
+\geometry{verbose,letterpaper,tmargin=20mm,bmargin=20mm,lmargin=20mm,rmargin=20mm}
+\usepackage{babel}
+\usepackage{floatflt}
+
+\makeatletter
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% LyX specific LaTeX commands.
+\providecommand{\LyX}{L\kern-.1667em\lower.25em\hbox{Y}\kern-.125emX\@}
+\newcommand{\noun}[1]{\textsc{#1}}
+
+\makeatother
+
+\begin{document}
+
+
+\title{Opis opcji programu mp4}
+
+\maketitle
+
+\section*{I. Oznaczenia zastosowane w opisie}
+
+Dla wczytywanego sygna³u w programie alokowana jest tablica o rozmiarze 3{*}N,
+gdzie N -ilo¶æ punktów sygna³u, które chcemy poddaæ analizie. ¦rodkowa czê¶æ
+tablicy, czyli od punktu N do 2{*}N-1 przeznaczona jest na w³a¶ciwy sygna³,
+``po bokach'' , tzn od punktu 0 do N-1 i od 2{*}N do 3{*}N-1, znajduj± siê fragmenty
+sygna³u, które s± dobierane w zale¿no¶ci od wyboru warunków brzegowych. Do opisu
+tych fragmentów tablicy, bêd± u¿ywane nazwy:
+
+segment I czê¶æ tablicy od puntktu 0 do N-1,
+
+segment II czê¶æ tablicy od punktu N do 2{*}N-1,
+
+segment III czê¶æ tablicy od punktu 2{*}N do 3{*}N-1.
+
+
+\section*{II. Wczytywanie sygna³u i dobieranie ``gaborków''}
+
+\noindent Odpowiedni fragment sygna³u, który ma byæ przeanalizowany, wczytywany
+jest do segmentu I, do segmentu II i III wczytywane s± punkty s³u¿±ce jako warunki
+brzegowe. Zgodnie z algorytmem MP, dobierane s± takie ``gaborki'', które wyt³umacz±
+jak najwiêksz± energiê sygna³u, ale bêd± zlokalizowane tylko w segmencie II.
+Rzaden z ``gaborków'' nie bêdzie siê znajdowa³ w segmencie I lub II.
+
+
+\section*{III. Opis opcji.}
+
+
+\subsection*{mp4}
+
+\begin{description}
+\item [mp4]\textbf{-q} wy³±czenie wypisywania wyników na ekran  
+\item [mp4]\textbf{-nazwa\_pliku} uruchomienie programu mp4, który wczyta i wykona
+polecenia ze skryptu
+\end{description}
+
+\subsection*{set}
+
+\begin{description}
+\item [set]\textbf{-e} \textbf{{[}dok³adno¶æ{]}} program rekonstruuje sygna³ dopóki
+nie zostanie osi±gniêta wymagana dok³adno¶æ 
+\item [set]\textbf{-i} \textbf{{[}ilo¶æ\_funkcji{]}} program rekonstruuje sygna³ za
+pomoc± wybranej liczby \char`\"{}gaborków\char`\"{}
+\end{description}
+
+\subparagraph*{ustawienia domy¶lne: }
+
+dok³adno¶æ:0.95 
+
+ilo¶æ gaborków:64 
+
+
+\subsection*{reinit}
+
+\begin{description}
+\item [reinit]\textbf{-O} \textbf{{[}rozmiar\_sygna³u{]}} ilo¶æ punktów do wczytania.
+Wybór tej opcji spowoduje alokowanie tablicy o rozmiarze 3{*}rozmiar\_sygna³u.
+\textbf{Rozmar\_sygna³u} powinien byæ potêg± 2 i wiêkszy b±d¼ równy 512.
+\item [reinit]\textbf{-R} \textbf{{[}rozmiar\_s³ownika{]}} je¿eli chcemy do obliczeñ
+u¿ywaæ s³ownika stochastycznego(fullstoch), to t± opcj± ustalamy jego rozmiar
+\item [reinit]\textbf{-i} opcja nie testowana , prawdopodobnie rozmiar ziarna dla
+randomu
+\item [reinit]\textbf{-t {[}typ\_s³ownika{]}} t± opcj± wybieramy typ s³ownika, którego
+chcemy u¿ywaæ, mo¿liwe s±: fullstoch-stochastyczny, octave-ze skalami 2\textasciicircum{}k,
+box-stochastyczny, ale z ustalonymi rozdzielczo¶ciami (atomy losowane z \char`\"{}pude³ka\char`\"{}
+o okre¶lonych rozmiarach) 
+\item [reinit]\textbf{-D{[}adaptacja\_s³ownika{]}} ustala redukcjê s³ownika 
+\item [reinit]\textbf{-e+|-} opcje nie testowane prawdopodobnie, dodatkowe optymalizacje
+\char`\"{}gaborków\char`\"{}
+\item [reinit]\textbf{-f} \textbf{{[}czêsto¶æ{]}} ustalenie czêsto¶ci próbkowania
+\item [reinit]\textbf{-T} \textbf{{[}czas{]}} ustalenie rozdzielczo¶ci w sekundach
+dla po³o¿enia \char`\"{}gaborka\char`\"{}, dotyczy s³ownika vbox
+\item [reinit]\textbf{-S} \textbf{{[}skala{]}} ustalenie rozdzielczo¶ci w sekundach
+dla skali \char`\"{}gaborka\char`\"{}, dotyczy s³ownika vbox 
+\item [reinit]\textbf{-F} \textbf{{[}czêsto¶æ{]}} ustalenie rozdzielczo¶ci w Hz dla
+czêsto¶ci \char`\"{}gaborka\char`\"{}, dotyczy s³ownika vbox
+\item [reinit]wy¶wietla aktualn± rozdzielczo¶æ dla s³ownika typu box, ilo¶æ gaborków
+i rozmiar s³ownika dla box, fullstoch i octave.zawieraj±cy
+\end{description}
+
+\paragraph*{Przyk³ady u¿ywania opcji reinit i \char`\"{}co pokazuje komputer\char`\"{}}
+
+\textbf{1.} Chcemy ustawiæ program dla sygna³u o rozmiarze 1024 punktów, próbkowanego
+z czêsto¶ci± 128 Hz i u¿yæ do obliczeñ s³ownika fullstoch o rozmiarze 300000
+gaborków. U¿ywamy komendy:
+
+\textbf{\emph{reinit -O 1024 -R 300000 -t fullstoch }}
+
+lub:
+
+\textbf{\emph{reinit -O 1024 -R 300000}} (s³ownik fullstoch jest s³ownikiem
+domy¶lnym)  
+
+\noindent komputer poka¿e na ekranie: 
+
+\emph{\noun{DF 1 \% (0.005 Hz ) }}
+
+\emph{\noun{DT 1 \% (5.12 sec) }}
+
+\emph{\noun{DS 10 \% (51.2 sec)}}
+
+Stochastic Boxed Dictionary size: 100980 atoms 
+
+Dictionary size: 10.3 MB 
+
+\noindent Cztery pierwsze linijki dotycz± parametrów dla s³ownika typu box.
+Dopiero ostatnia linijka (Dictionary size) zawiera informacje o s³owniku fullstoch.
+S³ownik stochastyczny zawieraj±cy 100000 \char`\"{}gaborków\char`\"{}, potrzebuje
+3.433 MB pamiêci. Ten zabra³ 10.3MB, czyli ma tak jak chcieli¶my 300000 \char`\"{}gaborków\char`\"{}.
+W tym przypadku rozmiar s³ownika nie zale¿y oczywi¶cie od czêsto¶ci próbkowania,
+ani od rozmiaru wczytywanego sygna³u.Wylosowanych zostanie 300000 \char`\"{}gaborków\char`\"{},
+o po³o¿eniu w czasie miêdzy 0 a 8 sekund± (czas trwania sygna³u =d³ugo¶æ/czêstotliwo¶æ
+próbkowania), skali miêdzy 0 a 8 sekund±, czêsto¶ci od 0 do 64 Hz (128/2=64
+-czêsto¶æ Nyquista)
+
+
+
+\paragraph*{2. \textmd{Chcemy wczytaæ sygna³ o rozmiarze 2048 punktów, próbkowany z czêsto¶ci±
+128Hz i u¿yæ do analizy s³ownika box.}}
+
+U¿yjmy na pocz±tek ustawieñ domy¶lnych dla rozdzielczo¶ci:
+
+\begin{description}
+\item [\emph{reinit}]\textbf{\emph{-O 2048 -f 128 -t box}} (Nale¿y pamiêtaæ by zawsze
+dawaæ opcjê -t box, gdy¿ domy¶lnym s³ownikiem jest fullstoch i on zostanie wylosowany).
+\end{description}
+na monitorze dostaniemy: 
+
+DF 1 \% (0.64 Hz) 
+
+DT 1 \% (0.16 sec) 
+
+DS 10 \% (1.6 sec)
+
+Stochastic Boxed Dictionary size: 100980 atoms 
+
+Stochastic Boxed Dictionary size: 100980 atoms 
+
+Done. 
+
+Dictionary size: 3.467 MB 
+
+\noindent wpiszmy jeszcze raz komendê:
+
+\emph{reinit} \textbf{\emph{-O 2048 -f 128 -t box}} 
+
+\noindent na monitorze dostaniemy:
+
+DF 1 \% (0.64 Hz) 
+
+DT 1 \% (0.16 sec) 
+
+DS 10 \% (1.6 sec)
+
+Stochastic Boxed Dictionary size: 100980 atoms 
+
+Stochastic Boxed Dictionary size: 100980 atoms 
+
+Done. 
+
+Dictionary size: 3.467 MB 
+
+\noindent Komendê ta u¿yto dwukrotnie, gdy¿ w programie jest ma³y b³±d, powoduj±cy
+wy¶wietlanie informacji wprowadzonych wcze¶niej. Nie ma to oczywi¶cie wp³ywu
+na losowanie s³ownika i.t.p, chc±c jednak mieæ dok³adne informacjê, nale¿y komendy
+wydawaæ dwukrotnie. B³±d ten zosta³ poprawiony (nie dajê jednak za to 100 procentowej
+pewno¶ci) w wersji programu za³±czonej na dyskietce. Je¿eli liczbê stoj±c± przed
+znakiem \% podzieli siê przez 100 i we¼mie odwrotno¶æ, to otrzyma siê informacjê,
+na ile czê¶ci zosta³ podzielony odpowiedni odcinek lokalizacji, skali i czêsto¶ci.
+Domy¶lnie jest to: 1\% dla czêsto¶ci (DF) \char`\"{}gaborka\char`\"{}, czyli
+przedzia³ czêsto¶ci do 0 do czêsto¶ci Nyquista dzielony jest na 100 czê¶ci,
+1\% dla lokalizacji (DT), 10\% dla skali (DS). W ten sposób otrzymywane jest
+trójwymiarowe pude³ko z którego losowany jest jeden \char`\"{}gaborek\char`\"{}
+(liczby w nawiasach podaj± rozmiary takiego pojedynczego pude³ka). Na monitorze
+program pokaza³, ¿e wylosowa³ 100980 gaborków, gdy¿ wy¶wietlanie ``procentowe''
+jest pewnym zaokr±gleniem. 
+
+\noindent Sygna³ z 2048 punktami, próbkowany z czesto¶ci± 128 Hz ma d³ugo¶æ
+16 sekund. Odpowiednie rozdzielczo¶ci bed± wiêc wynosiæ: 
+
+czêsto¶æ (DF):0.64Hz -> (128/2)/100 
+
+lokalizacja (DT):0.16sek->16/100 
+
+skala (DS):1.6 sek->16/10
+
+\noindent Przestrzeñ zosta³a wiêc podzielona na 100x100x10 pude³ek, mo¿liwe
+jest wiêc do uzyskania 100000 gaborków.
+
+Powiedzmy, ¿e nie podoba nam siê rozdzielczo¶æ w skali i chcemy j± zwiekszyæ
+10 razy u¿ywamy opcji:
+
+\begin{description}
+\item [\emph{reinit}]\textbf{\emph{-O 2048 -f 128 -S 0.16 -t box }}
+\end{description}
+lub
+
+\begin{description}
+\item [\emph{reinit}]\textbf{\emph{-S 0.16 -t box}} (je¶li wprowadzone by³y wcze¶niejsze
+opcje)
+\end{description}
+Na monitorze zostanie wy¶wietlone:
+
+DF 1 \% (0.64 Hz) 
+
+DT 1 \% (0.16 sec) 
+
+DS 1 \% (0.16 sec)
+
+Stochastic Boxed Dictionary size: 1029996 atoms 
+
+Stochastic Boxed Dictionary size: 1029996 atoms 
+
+Done. 
+
+Dictionary size: 35.36 MB
+
+\noindent (oczywi¶cie po wystukaniu tej komendy powtórnie).
+
+\noindent Jak widaæ rozdzielczo¶æ w skali zwiêkszy³a siê 10 razy (DS wynosi
+0.16 sek). Odcinek zosta³ podzielony na 100 czê¶ci-informuje o tym liczba 1
+\%. £±cznie wiêc przestrzeñ zosta³a podzielona na 100x100x100 czê¶ci, mo¿na
+wiêc wylosowaæ 1000000 \char`\"{}gaborków\char`\"{}, co zajê³o 35.36MB
+
+
+\paragraph*{ustawienia domy¶lne opcji reinit}
+
+\noindent rozmiar wczytywanego sygna³u: 3{*}512 punktów 
+
+\noindent typ s³ownika: fullstoch o rozmiarze 100000 atomów (3.433MB) 
+
+\noindent parametr redukcji s³ownika:0.7 
+
+\noindent ziarno dla randomu:0
+
+\noindent czêsto¶æ próbkowania: 1Hz 
+
+\noindent rozdzielczo¶ci: (nie wa¿ne je¶li nie zosta³ wybrany s³ownik box): 
+
+\noindent lokalizacja-odcinek dzielony na 100 czê¶ci (1\%)
+
+\noindent czêsto¶æ dzielona na 100 czê¶ci (1\%)
+
+\noindent skala dzielona na 10 czê¶ci (10\%)
+
+\noindent przy domy¶lnej czêsto¶ci próbkowania i d³ugo¶ci sygna³u daje to:
+
+\noindent DF 0.005Hz 
+
+\noindent DT 5.12sek 
+
+\noindent DS 51.2 sek
+
+
+\subsection*{loadsig}
+
+loadsig -opcja ta pozwala na wczytanie i analizowanie pojedynczego sygna³u.
+Sygna³ jest traktowany jako ca³o¶æ i nie ma uwzglêdnienia na rzadne warunki
+brzegowe.
+
+\begin{description}
+\item [loadsig]\textbf{-O} \textbf{nazwa\_pliku} wczytywanie sygna³u z pliku 
+\item [loadsig]\textbf{-c} \textbf{nr\_kana³u} wczytywanie sygna³u z kana³u nr\_kana³u
+(numeracja od 1)
+\item [loadsig]\textbf{-h} \textbf{max\_kana³} liczba wszystkich kana³ów 
+\item [loadsig]\textbf{-\#} \textbf{nr\_punktu} wczytywanie sygna³u od punktu. U¿ycie
+tej opcji spowoduje, ¿e z pliku zostanie wczytane do programu kolejne N punktów
+(N-ustalone komend± reinit) od wskazanego punktu. Numeracja od 0.
+\item [loadsig]\textbf{-t} \textbf{ascii|float|short} wczytywanie pliku typu ascii,
+binary , short 
+\item [loadsig]\textbf{-F} \textbf{czêsto¶æ} czêsto¶æ próbkowania sygna³u 
+\item [loadsig]\textbf{-C} \textbf{conv} sta³a konwersji zamiana warto¶ci punktów
+na volty 
+\item [loadsig]\textbf{-e} \textbf{ref1} elektrody odniesienia 
+\item [loadsig]\textbf{-f} \textbf{ref2} ---------||---------- 
+\item [loadsig]\textbf{-s shift} d³ugo¶æ pliku w bajtach do pominiêcia, z uwagi na
+nag³ówek pliku z informacjami. 
+\item [loadsig]\textbf{-p left|center|right} ustala, gdzie umie¶ciæ sygna³, w oznaczeniach
+przyjêtych w opisie, right za³aduje sygna³ do I segmentu, center do II segmentu,
+left do III segmentu. U¿ycie opcji loadsig -O nazwa\_pliku -p left spowoduje
+b³±d, gdy¿ sygna³ zostanie za³adowany do I segmentu, a \char`\"{}gaborki\char`\"{}
+mog± byæ lokalizowane tylko w drugim segmencie, który wype³niony jest samymi
+zerami. Opcja ta ma wiêc sens przy sklejaniu kilku sygna³ów np: loadsig -O nazwa\_pliku1
+-p left loadsig -O nazwa\_pliku2 -p center 
+\end{description}
+
+\paragraph*{Przyk³ady u¿ycia komendy loadsig.}
+
+Chcemy wczytaæ, przeanalizowaæ i zapisaæ wyniki 256 punktów z kana³u nr 3 od
+punktu 15, sygna³u o d³ugo¶ci 2048 punktów, próbkowanego z czêsto¶ci± 32Hz,
+zbieranego z czterech kana³ów i zapisanego w pliku binarnym, z którego pierwsze
+128 bajtów to opis pliku.
+
+Mamy 2048 punktów w czterech kana³ach, na jeden przypada wiêc 512 punktów, zatem
+u¿yjemy opcji:
+
+\textbf{\emph{reinit -O 256}}
+
+\textbf{\emph{loadsig -O nazwa\_pliku -F 128 -c 3 -h 4 -\# 14 -t float -s 128}}
+
+\textbf{\emph{mp}} 
+
+\textbf{\emph{save -O nazwa\_ksia¿ki (komenda save omówiona bêdzie ni¿ej)}}
+
+
+\paragraph*{\noindent ustawienia domy¶lne: }
+
+typ pliku: ascii 
+
+\noindent wczytywanie sygna³u do segmentu: center 
+
+\noindent nag³ówek pliku: 0 
+
+\noindent czêsto¶æ próbkowania:1 Hz
+
+\noindent d³ugo¶æ alokowanej tablicy dla wczytywanego sygna³u: 3{*}512 punktów
+(tak ja w kom. reninit)
+
+\noindent numer kana³u:1 
+
+\noindent maksymalny numer kana³u:1 
+
+\noindent wczytywanie sygna³u od punktu:0 
+
+\noindent elektrody odniesienia: brak 
+
+\noindent sta³a konwersji:1
+
+
+\subsection*{save}
+
+\begin{description}
+\item [save]\textbf{-O} \textbf{nazwa\_pliku} zapis ksia¿ki do pliku 
+\item [save]\textbf{-a -O} \textbf{nazwa\_pliku} dodanie ksi±¿ki na koniec pliku o
+ile plik istnieje 
+\item [save]\textbf{-s} tworzenie nowej ksi±¿ki 
+\end{description}
+
+\subsection*{reset}
+
+\begin{description}
+\item [reset]resetowanie sygna³u
+\end{description}
+U¿ywanie tej komendy ma sens w przypadku wykonywania obliczeñ za pomoc± polecenia
+loadsig. Je¿eli \char`\"{}loadsigiem\char`\"{} chcemy wczytaæ nowy sygna³, poprzedni
+usuwa siê komend± reset.
+
+
+\subsection*{norm}
+
+\begin{description}
+\item [norm]normowanie wczytanego sygna³u
+\end{description}
+
+\subsection*{type}
+
+\begin{description}
+\item [type]\textbf{-O} \textbf{nazwa\_pliku} zapis do pliku residu³um i sygna³u 
+\end{description}
+
+\subsection*{channel}
+
+\begin{description}
+\item [channel]\textbf{-O} \textbf{nazwa\_pliku} wczytywanie sygna³u z pliku
+\item [channel]\textbf{-c} \textbf{nr\_kana³u} wczytywanie sygna³u z kana³u nr\_kana³u 
+\item [channel]\textbf{-}h \textbf{max\_kana³} liczba wszystkich kana³ów 
+\item [channel]\textbf{-t} \textbf{ascii|float|short} wczytywanie pliku typu ascii,
+binary , short 
+\item [channel]\textbf{-F} \textbf{czêsto¶æ} czêsto¶æ próbkowania sygna³u 
+\item [channel]\textbf{-C conv} conv -sta³a konwersji zamiana warto¶ci punktów na
+volty 
+\item [channel]\textbf{-e} \textbf{ref1} elektrody odniesienia 
+\item [channel]\textbf{-f} \textbf{ref2} ---------||---------- 
+\item [channel]\textbf{-s} \textbf{shift} d³ugo¶æ pliku w bajtach do pominiêcia, z
+uwagi na nag³ówek pliku z informacjami.
+\item [channel]\textbf{-\#} \textbf{x} wczytywanie sygna³u od offsetu numer x 
+\item [channel]\textbf{-M} \textbf{max\_x} maksymalny numer offsetu
+\item [channel]\textbf{-I nazwa\_pliku} zapis ksi±¿ek do pliku
+\end{description}
+dok³adny opis powy¿szych opcji znajdzie siê ni¿ej
+
+\begin{description}
+\item [channel]\textbf{-i} reinicjacja 
+\item [channel]\textbf{-p} \textbf{zero|periodic|shift|natural} wybranie odpowiednich
+warunków brzegowych ich dok³adny sposób dzia³ania znajdzie siê w sprawozdaniu
+podsumowuj±cym ich dzia³anie.
+\item [\emph{zero}]kolejne offsety ³adowane s± do segmentu II. Segmenty I i III wype³niane
+s± zerami.
+\end{description}
+przyk³ad
+
+\noindent niech sygna³ zostanie podzielony na 4 offsety
+
+sygna³ 1 2 3 4
+
+\noindent kolejno¶æ wczytywania i sposób obliczania bêdzie nastêpuj±cy
+
+offset 1: zera 1 zera
+
+offset 2: zera 2 zera
+
+offset 3: zera 3 zera
+
+offset 4: zera 4 zera
+
+Uwaga: w programie numeracja prowadzona jest od 0, tutaj jednak pierwszym offsetem
+jest offset 1, by nie pomyliæ numeru 0 z zerami wype³niaj±cymi segmeny tablicy.
+
+\begin{description}
+\item [\emph{natural}]kolejne offsety ³adowane do segmentu II. Segment I i III wype³niane
+offsetami s±siednimi.
+\end{description}
+przyk³ad
+
+\noindent niech sygna³ zostanie podzielony na 4 offsety
+
+sygna³ 1 2 3 4
+
+\noindent kolejno¶æ wczytywania i sposób obliczania bêdzie nastêpuj±cy
+
+offset 1: zera 1 2
+
+offset 2: 1 2 3
+
+offset 3: 2 3 4
+
+offset 4: 2 3 4
+
+\begin{description}
+\item [\emph{periodic}]kolejne offsety wczytywane do segmentu II, w segmentach I i
+III residu³um z dopasowywania sygna³u z wcze¶niejszego offsetu.
+\end{description}
+przyk³ad
+
+\noindent niech sygna³ zostanie podzielony na 4 offsety
+
+sygna³ 1 2 3 4
+
+\noindent kolejno¶æ wczytywania i sposób obliczania bêdzie nastêpuj±cy
+
+offset 1: zera 1 zera
+
+offset 2: residu³um1 2 residu³um1
+
+offset 3: residu³um2 3 residu³um2
+
+offset 4: residu³um3 3 residu³um13
+
+\begin{description}
+\item [\emph{shift}]po obliczeniach przeprowadzonych na danym offsecie, warto¶ci sygna³ów
+w segmentach s± odpowiednio przesuwane, tak ¿e w nastêpnym kroku do segmentu
+II trafia residu³um z poprzedniego offsetu. Do segmentu III wczytywany jest
+za¶ w³a¶ciwy sygna³.
+\end{description}
+przyk³ad
+
+\noindent niech sygna³ zostanie podzielony na 4 offsety
+
+sygna³ 1 2 3 4
+
+\noindent kolejno¶æ wczytywania i sposób obliczania bêdzie nastêpuj±cy
+
+offset 1: zera 1 2
+
+offset 2: residu³um1 residu³um2 3
+
+offset 3: residu³um-residu³a2 residu³um3 4
+
+offset 4: residu³um-residu³a3 residu³um14 zera
+
+\noindent Taki sposób wczytywania sygna³u znajduje siê w wersji programu do³±czonej
+na dyskietce.
+
+\noindent \textbf{Omówienie komendy channel -\# numer\_offsetu i channel -M
+max\_x}
+
+Komenda channel s³u¿y do obliczeñ kana³owych. W odró¿nieniu od komendy loadsig
+sygna³ nie jest traktowany jako ca³o¶æ lecz dzielony na fragmenty (offsety)
+o odpowiedniej d³ugo¶ci.Ka¿dy z nich kolejno jest wczytywany do segmentu II
+alokowanej w programie tablicy i dokonywane s± na nim obliczenia. W programie
+MP4 numeracja offsetów zaczyna siê od 0. Gaborki dobrane do ka¿dego offsetu
+s± zapisywane do jednego pliku wybranego opcj± -I nazwa pliku.
+
+
+\paragraph*{\raggedright Przyk³ad.}
+
+Mamy sygna³ o d³ugo¶ci 4096 próbkowany z czêsto¶ci± 64 Hz zapisany w pliku binarnym,
+chcemy go wczytaæ, podzieliæ na odcinki o d³ugo¶ci 512 punktów i roz³o¿yæ offsety
+od 3 do 6, korzystaj±c ze s³ownika fullstoch z 300000 \char`\"{}gaborków\char`\"{}
+i naturalnych warunków brzegowych, a wyniki zapisaæ do pliku przyk³ad.b.
+
+\noindent Wydajemy polecenia
+
+\textbf{\emph{reinit -R 300000 -f 64 -O 512 }}
+
+\textbf{\emph{channel -O sygna³ -p natural -F 64 -\#2 -M 5 -t float -I przyk³ad.b}}
+
+\noindent Je¼eli nie zosta³by podany numer offsetu od którego chcemy zacz±æ
+i na którym chcemy zakoñczyæ obliczenia, domy¶lnie zostnie wczytany sygna³ od
+pierwszego (zerowy) do ostatniego (w tym przypadku 7). 
+
+Je¿eli nie zosta³aby podana nazwa pliku gdzie powinny byæ zapisywane ksi±¿ki
+to zostan± one zapisane do ksi±¿ki \textbf{book.}b.
+
+U¿ywanie polecenia channel z opcjami -c -C -h -f -e tak samo jak w przypadku
+komendy loadsig
+
+
+\paragraph*{\noindent Ustawienia domy¶lne: }
+
+\noindent typ pliku: ascii 
+
+\noindent plik danych:dane.dat
+
+\noindent plik dla ksi±¿ek:book.b
+
+\noindent warunki brzegowe typu: natural 
+
+\noindent numer pocz±tkowego offsetu: 0 
+
+\noindent numer koñcowego offsetu: d³ugo¶æ sygna³u/d³ugo¶æ offsetu 
+
+\noindent nag³ówek pliku: 0 
+
+\noindent czêsto¶æ próbkowania:1 Hz
+
+\noindent d³ugo¶æ offsetu: zgodnie z domy¶lnym ustawieniem komendy reinit, a
+tam jest 512 punktów
+
+
+\subsection*{Wersja programu MP4 znajduj±ca siê na dyskietce.}
+
+W porównaniu z ostatnimi poprawkami, które s± ju¿ w programie na uczelni dokonano
+dwóch zmian:
+
+\noindent 1. wczytywania sygna³u przy warunkach brzegowych shift.
+
+\noindent 2. wy¶wietlanie informacji o rozdzielczo¶ci i wielko¶ci± s³ownika.
+
+\noindent Obecnie na ekranie pojawiaj± siê tylko rozdzielczo¶ci dla s³ownika
+typu box oraz rozmiar 
+
+\noindent ilo¶æ gaborków w obecnie u¿ywanym s³owniku (wybranym komenda reinit
+-t ...)
+
+\end{document}

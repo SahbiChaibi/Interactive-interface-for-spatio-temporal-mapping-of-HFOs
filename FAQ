@@ -1,0 +1,179 @@
+                  =========================================
+                  PTHREADS-WIN32 Frequently Asked Questions
+                  =========================================
+
+INDEX
+-----
+
+Q 1	Should I use Cygwin or Mingw32 as a development environment?
+
+Q 2	Now that pthreads-win32 builds under Mingw32, why do I get
+	memory access violations?
+
+Q 3	How do I use pthread.dll for Win32 (Visual C++ 5.0)
+
+=============================================================================
+
+Q 1	Should I use Cygwin or Mingw32 as a development environment?
+---
+
+A 1
+---
+Important: see Q2 also.
+
+I short, use Mingw32 with the MSVCRT library to build applications that use
+the DLL. You cannot build the library itself with either yet because the
+library uses C++ EH which is not thread-safe in egcs yet. Use MSVC or grab
+the pre-build DLL etc.
+
+Date: Mon, 07 Dec 1998 15:11:37 +0100
+From: Anders Norlander <anorland@hem2.passagen.se>
+To: Ross Johnson <rpj@ise.canberra.edu.au>
+Cc: pthreads-win32 <pthreads-win32@air.net.au>
+Subject: Re: pthreads-win32: TryEnterCriticalSection patch (fwd)
+
+Ross Johnson wrote:
+> 
+> Anders,
+> 
+> You said you're using GCC. Is that from cygwin32 or mingw32? What is your
+> environment (so I can perhaps help other people out)? We have problems
+> with cygwin32 et al that have been built on Win95. They're missing
+> _{begin,end}threadex.
+
+Ross,
+
+I use mingw32 when compiling pthreads-win32, but unlike most people I
+use MSVCRT as the C library instead of CRTDLL. For those that don't
+feel like configuring and building the necessary components themselves,
+Mumit Khan has released an add on for mingw32 to make it use MSVCRT40.
+It is available at his ftp site, follow the minw32 links at
+http://www.xraylith.wisc.edu/~khan/software/gnu-win32/
+
+For cygwin it is a completely different matter. I suppose
+pthreads-win32 uses _beginthreadex and _endthreadex because the Win32
+docs say that programs calling functions in the C library should not
+use CreateThread and ExitThread. However, this applies only to
+Microsoft's (and possibly others) multithreaded C libraries that need
+to keep track of per thread data, it does not apply to cygwin.
+This code solves the problem:
+
+/* Check for old and new versions of cygwin */
+#if defined(__CYGWIN32__) || defined(__CYGWIN__)
+/* Macro uses args so we can cast start_proc to LPTHREAD_START_ROUTINE
+   in order to avoid warnings because of return type */
+#define _beginthreadex(security, stack_size, start_proc, arg, flags,
+pid) \
+CreateThread(security, stack_size, (LPTHREAD_START_ROUTINE) start_proc,
+\
+             arg, flags, pid)
+#define _endthreadex ExitThread
+#endif
+
+I would be extremely careful using threads with cygwin, since it is
+not (yet) threadsafe.
+
+Regards,
+Anders
+
+------------------------------------------------------------------------------
+
+Q 2	Now that pthreads-win32 builds under Mingw32, why do I get
+---	memory access violations (segfaults)?
+
+A 2
+---
+The following email exchange describes the problem. Until this issue
+is resolved people without the Microsoft compiler can obtain the current
+MSVC prebuilt DLL (pthread.{dll,lib,h}) at:
+
+ftp://sourceware.cygnus.com/pub/pthreads-win32/dll-latest 
+
+Date: Wed, 10 Feb 1999 13:21:01 -0000
+From: "Ruland, Kevin" <Kevin.Ruland@anheuser-busch.com>
+Reply-To: POSIX threads on Win32 <pthreads-win32@air.net.au>
+To: 'POSIX threads on Win32' <pthreads-win32@air.net.au>
+Subject: Mingw32 exceptions not thread safe.
+
+Hello everyone.
+
+I asked Mumit Khan, maintainer of egcs for mingw and assorted guru, about
+the Known Problem listed below.  
+
+> Known problems
+> --------------
+> 
+> There is an unresolved bug which shows up as a segmentation fault
+> (memory access violation) when the library is built using g++. Build
+> the test program "eyal1.c" and run with an argument of "2" or
+> greater. The argument is the number of threads to run, excluding the
+> main thread, so the bug appears with 2 or more worker threads.
+> 
+> Kevin Ruland has traced the exception to the try/catch blocks in
+> _pthread_threadStart().
+> 
+
+The official word is:
+
+<Quote Mumit Khan [khan@xraylith.wisc.edu]>
+EGCS-1.1.1 for win32 (either cygwin or crtdll/msvc runtimes) do not have
+thread-safe exception support. 
+
+For Cygwin, it'll happen when Cygwin runtime has mature thread safety and
+pthread is fully integrated. Then it's just a matter of rebuilding GCC (or
+just libgcc in this) with thread safe EH support.
+
+For Mingw crtdll/msvc, someone needs to write the thread-wrapper for win32
+threads. Anyone who knows win32 threads should be able to do this without
+much trouble at all. It's low on my priority list, so unless someone else
+volunteers, it'll have to wait.
+
+Are you willing to take a look? If so, I can provide details.
+<\Quote>
+
+And there you have it!  To summarize, it's nice that pthreads compile but they
+aren't much use just yet.
+
+I'll respond to Mumit with 'Okay, what do I need to look at', but may not be
+able to tackle it myself.
+
+Kevin
+
+------------------------------------------------------------------------------
+
+Q 3	How do I use pthread.dll for Win32 (Visual C++ 5.0)
+---	
+
+A 3
+---
+>
+> I'm a "rookie" when it comes to your pthread implementation.  I'm currently
+> desperately trying to install the prebuilt .dll file into my MSVC compiler.
+> Could you please provide me with explicit instructions on how to do this (or
+> direct me to a resource(s) where I can acquire such information)?
+>
+> Thank you,
+>
+
+You should have a .dll, .lib, .def, and three .h files.
+
+The .dll can go in any directory listed in your PATH environment
+variable, so putting it into C:\WINDOWS should work.
+
+The .lib file can go in any directory listed in your LIB environment
+variable.
+
+The .h files can go in any directory listed in your INCLUDE
+environment variable.
+
+Or you might prefer to put the .lib and .h files into a new directory
+and add its path to LIB and INCLUDE. You can probably do this easiest
+by editing the file:-
+
+C:\Program Files\DevStudio\vc\bin\vcvars32.bat
+
+The .def file isn't used by anything in the pre-compiled version but 
+is included for information.
+
+Cheers.
+Ross
