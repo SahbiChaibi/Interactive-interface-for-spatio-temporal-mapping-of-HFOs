@@ -70,7 +70,7 @@ There is an inherent tradeoff between the correct detection rate and the false d
 
 
 
-Stage 4 – Mapping of HFO features
+## Stage 4 – Mapping of HFO features
 
 ![image](https://github.com/user-attachments/assets/13edbedc-15d9-4e9d-8846-630a2a71dc02)
 
