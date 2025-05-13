@@ -66,7 +66,7 @@ There is an inherent tradeoff between the correct detection rate and the false d
    
 4. In the case of spurious HFOs, they can be discarded using the 'Delete' buttons in the right colum.
 ![image](https://github.com/user-attachments/assets/2ea711fe-43aa-43c8-be2f-756806399da3)
-![image](https://github.com/user-attachments/assets/e2979751-4cd2-4ab5-97d0-9cc9a618b177)
+
 
 
 
