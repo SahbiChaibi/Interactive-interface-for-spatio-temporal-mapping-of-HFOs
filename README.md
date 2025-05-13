@@ -65,13 +65,16 @@ There is an inherent tradeoff between the correct detection rate and the false d
    ![image](https://github.com/user-attachments/assets/95c52f5e-1c8a-4298-ab77-93518a889e4d)
    
 4. In the case of spurious HFOs, they can be discarded using the 'Delete' buttons in the right colum.
- ![image](https://github.com/user-attachments/assets/f4c2dc21-27b6-4e11-85c5-ccd6664c9182)
- ![image](https://github.com/user-attachments/assets/ac13453f-9575-4d50-929e-b92e7c586b01)
+![image](https://github.com/user-attachments/assets/2ea711fe-43aa-43c8-be2f-756806399da3)
+![image](https://github.com/user-attachments/assets/e2979751-4cd2-4ab5-97d0-9cc9a618b177)
+
 
 
 Stage 4 – Mapping of HFO features
 
 ![image](https://github.com/user-attachments/assets/13edbedc-15d9-4e9d-8846-630a2a71dc02)
+
+
 
 # Launch HFOsMap
 You can start the project by running the Main.m file in the root directory. This loads the GUI settings. 
