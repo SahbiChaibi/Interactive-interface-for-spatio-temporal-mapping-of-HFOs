@@ -59,15 +59,14 @@ There is an inherent tradeoff between the correct detection rate and the false d
 ![image](https://github.com/user-attachments/assets/49f5a295-a1c1-472d-9747-296fc14f66f2)
 ![image](https://github.com/user-attachments/assets/c75bc97a-5241-4d16-a8b1-8874c8918460)
 
-3. The expert reviewer can track each HFO pattern individually in both time and time-frequency domains (80-500 Hz) to determine its validity and decide whether to retain or discard it.
+2. The expert reviewer can track each HFO pattern individually in both time and time-frequency domains (80-500 Hz) to determine its validity and decide whether to retain or discard it.
    
-4. The main plotted characteristics are: the duration, the inter-duration, the occurrence rate, the power, and the average frequency of condidate HFOs.
+3. The main plotted characteristics are: the duration, the inter-duration, the occurrence rate, the power, and the average frequency of condidate HFOs.
    ![image](https://github.com/user-attachments/assets/95c52f5e-1c8a-4298-ab77-93518a889e4d)
-   ![image](https://github.com/user-attachments/assets/ac13453f-9575-4d50-929e-b92e7c586b01)
-
-
-7. In the case of spurious HFOs, they can be discarded using the 'Delete' buttons in the right column
-
+   
+4. In the case of spurious HFOs, they can be discarded using the 'Delete' buttons in the right colum.
+ ![image](https://github.com/user-attachments/assets/f4c2dc21-27b6-4e11-85c5-ccd6664c9182)
+ ![image](https://github.com/user-attachments/assets/ac13453f-9575-4d50-929e-b92e7c586b01)
 
 
 Stage 4 – Mapping of HFO features
