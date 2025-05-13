@@ -16,7 +16,8 @@ A simplified flowchart illustrating the processes integrated into our software i
 This project is related to the research article titled:
 “Interactive Interface for Spatio-Temporal Mapping of the Epileptic Human Brain Using Characteristics of High-Frequency Oscillations (HFOs)”,
 published in the Biomedical Signal Processing and Control journal (2023).
-You can access the article via the following DOI link: https://doi.org/10.1016/j.bspc.2023.105041
+You can access the article via the following DOI link: https://doi.org/10.1016/j.bspc.2023.105041.
+
 Authors grant a nonexclusive license to use this software and documentation for education and research. No part of the software or documentation can be included in any commercial product without prior obtaining a written permission of the authors. Please cite the following reference:
 Chaibi S, Mahjoub C, Le Bouquin Jeannes R, & Kachouri A. Interactive Interface for Spatio-Temporal Mapping of the Epileptic Human Brain Using Characteristics of High-Frequency Oscillations (HFOs). Biomedical Signal Processing and Control, 2023, 85, 105041. https://doi.org/10.1016/j.bspc.2023.105041.
 
