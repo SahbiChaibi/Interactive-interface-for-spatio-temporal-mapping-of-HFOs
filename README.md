@@ -28,5 +28,5 @@ Here is a brief summary in bullet points of the described GUI features:
 6. Middle graph: Displays the filtered signal, either in the time domain or time-frequency domain, depending on the detection method.
 7. Bottom graph: Indicates the start and end times of each detected HFO event.
 8. Zoom sliders: Vertical and horizontal sliders enable zooming on amplitude and time during HFO verification.
-![image](https://github.com/user-attachments/assets/4fde0c0e-18a0-414a-95a2-ea8250135582)
+
 
