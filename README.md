@@ -2,7 +2,6 @@
 Most clinicians are not deeply familiar with computer programming skills. Therefore, simplifying and integrating various standalone diagnostic algorithms into user-friendly graphical interfaces can be highly beneficial for them in this regard. Over the last two decades, HFOs have emerged as potential biomarkers in epilepsy diagnosis and monitoring. The presented software is a plug-and-play interactive Graphical User Interface (GUI) designed for detecting and tracking the underlying mechanisms of HFOs biomarkers. It incorporates six validated HFO detection methods, followed by better reduction of false detection rates. It also tracks changes of HFO characteristics across different brain regions and temporal clinical stages. 
 Keywords: Epilepsy, HFOs, detection, verification and checking, features, brain mapping.
 
-
 # HFOsMap workflow
 The process of reliable detection and brain mapping of High-Frequency Oscillation (HFO) features in epilepsy involves four main stages:
 Stage 1 – EEG data reading.
