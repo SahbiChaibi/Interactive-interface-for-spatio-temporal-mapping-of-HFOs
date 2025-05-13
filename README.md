@@ -17,3 +17,8 @@ published in the Biomedical Signal Processing and Control journal (2023).
 You can access the article via the following DOI link: https://doi.org/10.1016/j.bspc.2023.105041
 Citation:
 Chaibi S, Mahjoub C, Le Bouquin Jeannes R & Kachouri A. Interactive Interface for Spatio-Temporal Mapping of the Epileptic Human Brain Using Characteristics of High-Frequency Oscillations (HFOs). Biomedical Signal Processing and Control(2023), 85, 105041. https://doi.org/10.1016/j.bspc.2023.105041.
+
+# Main parts of the proposed GUI
+## Push button (Browse) allows the user to upload the EEG database, that should be in format extension (*.mat). 
+![image](https://github.com/user-attachments/assets/b60717df-3c74-4458-944f-7a5034f7315e)
+
