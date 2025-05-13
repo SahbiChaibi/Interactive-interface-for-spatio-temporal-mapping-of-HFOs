@@ -1,7 +1,7 @@
-# HFOsTrack: An interactive GUI for reliable detection and brain mapping of High-Frequency Oscillations (HFOs) features in epilepsy
+# HFOsMap: An interactive GUI for reliable detection and brain mapping of High-Frequency Oscillations (HFOs) features in epilepsy
 In the neurological field, most clinicians are not deeply familiar with signal and image processing, artificial intelligence, or programming skills. Therefore, simplifying and integrating various existing algorithms into user-friendly graphical interfaces can be highly beneficial for them in this regard. Recently, High-Frequency Oscillations (HFOs) have emerged as key biomarkers in epilepsy research and diagnosis. The presented software is a plug-and-play interactive Graphical User Interface (GUI) designed for detecting and tracking the underlying mechanisms of HFOs biomarkers. It incorporates six validated HFO detection methods followed by reduction of false detection rates. It also offers new brain mapping capabilities to monitor HFO characteristics across different brain regions and clinical stages. This tool helps bridge the gap between research and clinical practice, enhancing the understanding of clinical relevance and applicability of HFOs in epilepsy.
 
-# HFOsTrack workflow
+# HFOsMap workflow
 The process of reliable detection and brain mapping of High-Frequency Oscillation (HFO) features in epilepsy involves four main stages:
 Stage 1 – Data reading,
 Stage 2 – Selection of the HFO detection method & HFOs detection,
@@ -46,6 +46,11 @@ Here is an snapshotw examples with detection of HFOs with six validates methods
 ![image](https://github.com/user-attachments/assets/dbc5df3e-8e06-4a01-9ea8-fdf96dd30035)
 ![image](https://github.com/user-attachments/assets/1fee0bd4-50c8-41c7-93e5-e1b1c261afae)
 
+Stage 4 – Mapping of HFO features
 
+![image](https://github.com/user-attachments/assets/13edbedc-15d9-4e9d-8846-630a2a71dc02)
+
+# Launch HFOsMap
+You can start the project by running the Main.m file in the root directory. This loads the GUI settings. 
 
 
