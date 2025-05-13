@@ -39,13 +39,16 @@ Here is a brief summary in bullet points of the first stage:
 3. Pressing the "Run" button executes the internal functionalities of the chosen method.
 
 Some snapshot examples of HFO detection using the six proposed methods are shown in the figures below:
+
 ![image](https://github.com/user-attachments/assets/d3c642b9-2fae-44c1-ba4f-8b5b46064070)
 ![image](https://github.com/user-attachments/assets/c4d5a095-c30c-40e6-9a03-10c7ea7b7653)
 ![image](https://github.com/user-attachments/assets/44d57d7f-8df5-49a9-825b-2ccdec48c2ff)
 ![image](https://github.com/user-attachments/assets/f2597ae8-0b0c-481d-b8f7-08926fc45cb5)
 ![image](https://github.com/user-attachments/assets/7bb235ec-0fa2-4f87-bfc7-193d0d6f4afd)
 ![image](https://github.com/user-attachments/assets/d910c5d6-6b98-4595-8410-27b0a2f442a9)
+
    4.The detected HFO events are shown graphically in the upper area, highlighted in red within the signals, and in the bottom graph, indicating their start and end times. Additionally, detection results ( HFOs and their feautures) can be displayed numerically by clicking on 'Detection Results' button as shown in this figure:
+   
  ![image](https://github.com/user-attachments/assets/46528472-507f-46b3-84d4-65db2bbe5170)
    
 ## Stage 3 – Verification of detected HFOs
