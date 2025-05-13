@@ -80,7 +80,7 @@ Stage 4 – Mapping of HFO features
 You can start the project by running the Main.m file in the root directory. This loads the GUI settings. 
 ## Data availability
 The intracranial EEG dataset used in this study for experiment test is exclusively restricted to the Montreal Neurological Institute and Hospital (Canada) to protect patients’ privacy and confidentiality.
-the usped dataset in this projected is reffered to as ppp.mat, includels a variablelike allEEG thant contains all EEG electrodes.
+The dataset used in this project is referred to as ppp.mat, which includes a variable named allEEG that contains data from all EEG electrodes.
 
 
 
