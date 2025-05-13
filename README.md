@@ -19,6 +19,14 @@ Citation:
 Chaibi S, Mahjoub C, Le Bouquin Jeannes R & Kachouri A. Interactive Interface for Spatio-Temporal Mapping of the Epileptic Human Brain Using Characteristics of High-Frequency Oscillations (HFOs). Biomedical Signal Processing and Control(2023), 85, 105041. https://doi.org/10.1016/j.bspc.2023.105041.
 
 # Main parts of the proposed GUI
-## Push button (Browse) allows the user to upload the EEG database, that should be in format extension (*.mat). 
-![image](https://github.com/user-attachments/assets/b60717df-3c74-4458-944f-7a5034f7315e)
+Here is a brief summary in bullet points of the described GUI features:
+1. Browse button: Allows the user to upload EEG data files in .mat format.
+2. Sampling frequency field: Editable field to set the sampling rate for EEG signal processing.
+3. Electrode selector: Editable field to choose the EEG electrode index for analysis (HFO detection is done electrode by electrode for individual review).
+4. Window(s) field: Lets the user define the length of the EEG signal segment to display.
+5. Upper display area: Shows the selected EEG signal segment and highlights detected HFO events in red.
+6. Middle graph: Displays the filtered signal, either in the time domain or time-frequency domain, depending on the detection method.
+7. Bottom graph: Indicates the start and end times of each detected HFO event.
+8. Zoom sliders: Vertical and horizontal sliders enable zooming on amplitude and time during HFO verification.
+![image](https://github.com/user-attachments/assets/4fde0c0e-18a0-414a-95a2-ea8250135582)
 
