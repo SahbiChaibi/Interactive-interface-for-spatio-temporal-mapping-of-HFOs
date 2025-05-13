@@ -56,12 +56,13 @@ Some snapshot examples of HFO detection using the six proposed methods are shown
 There is an inherent tradeoff between the correct detection rate and the false detection rate in HFO detection approaches, often resulting in high false detection rates (up to 80%). Thus, automatic HFO detection results require review by trained experts to avoid inaccuracies, which is particularly important when studying epileptic connectivity networks. A rapid examination of detected results, including candidate HFOs, is facilitated through the 'Detection Results' button, which moves the user to an interactive window (as shown in the last figure above) containing detailed analytical information related to the characteristics of candidate HFO patterns.
 
 1. Show buttons  [1,2,.., N] allow the user to plot the start and end time positions of different candidate HFO bursts by marking the start-end times with two vertical lines for 1D methods (RMS and D-TREE methods), or in the time-frequency domain for the remaining approaches.
-![image](https://github.com/user-attachments/assets/49f5a295-a1c1-472d-9747-296fc14f66f2), ![image](https://github.com/user-attachments/assets/c75bc97a-5241-4d16-a8b1-8874c8918460)
+![image](https://github.com/user-attachments/assets/49f5a295-a1c1-472d-9747-296fc14f66f2) ![image](https://github.com/user-attachments/assets/c75bc97a-5241-4d16-a8b1-8874c8918460)
 
 2. The expert reviewer can track each HFO pattern individually in both time and time-frequency domains (80-500 Hz) to determine its validity and decide whether to retain or discard it.
    
 3. The main plotted characteristics are: the duration, the inter-duration, the occurrence rate, the power, and the average frequency of condidate HFOs.
-   ![image](https://github.com/user-attachments/assets/95c52f5e-1c8a-4298-ab77-93518a889e4d)
+   ![image](https://github.com/user-attachments/assets/95c52f5e-1c8a-4298-ab77-93518a889e4d) ![image](https://github.com/user-attachments/assets/ac13453f-9575-4d50-929e-b92e7c586b01)
+
 
 7. In the case of spurious HFOs, they can be discarded using the 'Delete' buttons in the right column
 
