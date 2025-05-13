@@ -34,7 +34,7 @@ Here is a brief summary in bullet points of the first stage:
 ![image](https://github.com/user-attachments/assets/c3887e05-6a01-4709-9f38-34439a4f73ed)
 
 ## Stage 2 – Selection of the HFOs detection method and adjustment of its internal hyperparameters
-1. The user can choose one of the six proposed methods: RMS, CMOR, BUMP, MP, HHT, and D-TREE.
+1. The six radio buttons shown in the GUI are used to select one method from the following six proposed methods: RMS, CMOR, BUMP, MP, HHT and D-TREE.
 2. Before running the chosen method, the user can adjust the appropriate hyperparameters associated with the selected method.
 3. Pressing the "Run" button executes the internal functionalities of the chosen method.
 
@@ -51,13 +51,23 @@ Some snapshot examples of HFO detection using the six proposed methods are shown
    
  ![image](https://github.com/user-attachments/assets/46528472-507f-46b3-84d4-65db2bbe5170)
    
-## Stage 3 – Verification of detected HFOs
+## Stage 3 – Rapid checking of detected HFOs 
 
+There is an inherent tradeoff between the correct detection rate and the false detection rate in HFO detection approaches, often resulting in high false detection rates (up to 80%). Thus, automatic HFO detection results require review by trained experts to avoid inaccuracies, which is particularly important when studying epileptic connectivity networks. A rapid examination of detected results, including candidate HFOs, is facilitated through the 'Detection Results' button, which moves the user to an interactive window (as shown in the last figure above) containing detailed analytical information related to the characteristics of candidate HFO patterns.
 
-
+1. Show buttons  [1,2,.., N] allow the user to plot the start and end time positions of different candidate HFO bursts by marking the start-end times with two vertical lines for 1D methods (RMS and D-TREE methods), or in the time-frequency domain for the remaining approaches.
+2. 
 ![image](https://github.com/user-attachments/assets/1bc524f7-dcb1-4b94-bfd4-710e226b6a6b)
 ![image](https://github.com/user-attachments/assets/dbc5df3e-8e06-4a01-9ea8-fdf96dd30035)
 ![image](https://github.com/user-attachments/assets/1fee0bd4-50c8-41c7-93e5-e1b1c261afae)
+
+3. The expert reviewer can track each HFO pattern individually in both time and time-frequency domains (80-500 Hz) to determine its validity and decide whether to retain or discard it.
+   
+5. The main plotted characteristics are: the duration, the inter-duration, the occurrence rate, the power, and the average frequency of condidate HFOs.
+   
+7. In the case of spurious HFOs, they can be discarded using the 'Delete' buttons in the right column
+
+
 
 Stage 4 – Mapping of HFO features
 
