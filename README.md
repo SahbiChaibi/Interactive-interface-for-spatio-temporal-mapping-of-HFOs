@@ -21,15 +21,15 @@ Authors grant a nonexclusive license to use this software and documentation for 
 Chaibi S, Mahjoub C, Le Bouquin Jeannes R, & Kachouri A. Interactive Interface for Spatio-Temporal Mapping of the Epileptic Human Brain Using Characteristics of High-Frequency Oscillations (HFOs). Biomedical Signal Processing and Control, 2023, 85, 105041. https://doi.org/10.1016/j.bspc.2023.105041.
 
 ## Stage 1 – EEG Data reading
-Here is a brief summary in bullet points of the described GUI features:
+Here is a brief summary in bullet points of the first stage:
 1. Browse button: Allows the user to upload EEG data files in .mat format.
-2. Sampling frequency field: Editable field to set the sampling rate for EEG signal processing.
-3. Electrode selector: Editable field to choose the EEG electrode index for analysis (HFO detection is done electrode by electrode for individual review).
-4. Window(s) field: Lets the user define the length of the EEG signal segment to display.
-5. Upper display area: Shows the selected EEG signal segment and highlights detected HFO events in red.
-6. Middle graph: Displays the filtered signal, either in the time domain or time-frequency domain, depending on the detection method.
-7. Bottom graph: Indicates the start and end times of each detected HFO event.
-8. Zoom sliders: Vertical and horizontal sliders enable zooming on amplitude and time during HFO verification.
+2. Sampling frequency field: Editable text box to set the sampling frequency for EEG signals.
+3. Electrode selector: An editable text box to specify the EEG electrode index for analysis (HFO detection is performed electrode by electrode for detailed verification).
+5. Window(s) field: Allows the user to define the length of the EEG signal segment to display.
+6. Upper display area: Shows the selected EEG signal channel and highlights detected HFO events in red when detected.
+7. Middle graph: Displays the filtered signal, either in the time domain or time-frequency domain, depending on the detection method.
+8. Bottom graph: Indicates the start and end times of each detected HFO event.
+9. Zoom sliders: Vertical and horizontal sliders enable zooming on amplitude and time during HFO verification.
 ![image](https://github.com/user-attachments/assets/c3887e05-6a01-4709-9f38-34439a4f73ed)
 
 ## Stage 2 – Selection of the HFO detection method & HFOs detection
