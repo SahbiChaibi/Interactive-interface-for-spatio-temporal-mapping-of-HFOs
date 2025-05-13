@@ -39,12 +39,7 @@ Here is an snapshotw examples with detection of HFOs with six validates methods
 ![image](https://github.com/user-attachments/assets/7bb235ec-0fa2-4f87-bfc7-193d0d6f4afd)
 ![image](https://github.com/user-attachments/assets/d910c5d6-6b98-4595-8410-27b0a2f442a9)
 
-
-
-
-
-
-
-![image](https://github.com/user-attachments/assets/e49156b1-3a12-41f8-9fbd-1c7a0f1433d2)
+## Stage 3 – Verification of detected HFOs
+![image](https://github.com/user-attachments/assets/72b9376f-78de-4069-a122-0e9e545a8543)
 
 
