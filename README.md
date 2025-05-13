@@ -9,3 +9,11 @@ Stage 3 – Verification of detected HFOs,
 Stage 4 – Mapping of HFO features.
 A simplified flowchart illustrating the functionalities of our software is shown in the figure below.
 ![image](https://github.com/user-attachments/assets/a152e8fd-6790-4ee6-8850-05741ab6f6dd)
+
+# Related Article
+This project is associated with the research article titled:
+“Interactive Interface for Spatio-Temporal Mapping of the Epileptic Human Brain Using Characteristics of High-Frequency Oscillations (HFOs)”,
+published in the Biomedical Signal Processing and Control journal (2023).
+You can access the article via the following DOI link: https://doi.org/10.1016/j.bspc.2023.105041
+Citation:
+Chaibi S, Mahjoub C, Le Bouquin Jeannes R & Kachouri A. Interactive Interface for Spatio-Temporal Mapping of the Epileptic Human Brain Using Characteristics of High-Frequency Oscillations (HFOs). Biomedical Signal Processing and Control(2023), 85, 105041. https://doi.org/10.1016/j.bspc.2023.105041.
