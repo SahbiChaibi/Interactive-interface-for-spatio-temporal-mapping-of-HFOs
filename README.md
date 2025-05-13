@@ -42,6 +42,7 @@ Here is an snapshotw examples with detection of HFOs with six validates methods
 ## Stage 3 – Verification of detected HFOs
 ![image](https://github.com/user-attachments/assets/46528472-507f-46b3-84d4-65db2bbe5170)
 
+
 ![image](https://github.com/user-attachments/assets/1bc524f7-dcb1-4b94-bfd4-710e226b6a6b)
 ![image](https://github.com/user-attachments/assets/dbc5df3e-8e06-4a01-9ea8-fdf96dd30035)
 ![image](https://github.com/user-attachments/assets/1fee0bd4-50c8-41c7-93e5-e1b1c261afae)
@@ -52,5 +53,8 @@ Stage 4 – Mapping of HFO features
 
 # Launch HFOsMap
 You can start the project by running the Main.m file in the root directory. This loads the GUI settings. 
+## Data availability
+The intracranial EEG dataset used in this study for experiment test is exclusively restricted to the Montreal Neurological Institute and Hospital (Canada) to protect patients’ privacy and confidentiality.
+
 
 
