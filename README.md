@@ -47,7 +47,7 @@ Some snapshot examples of HFO detection using the six proposed methods are shown
 ![image](https://github.com/user-attachments/assets/7bb235ec-0fa2-4f87-bfc7-193d0d6f4afd)
 ![image](https://github.com/user-attachments/assets/d910c5d6-6b98-4595-8410-27b0a2f442a9)
 
-   4.The detected HFO events are shown graphically in the upper area, highlighted in red within the signals, and in the bottom graph, indicating their start and end times. Additionally, detection results ( HFOs and their feautures) can be displayed numerically by clicking on 'Detection Results' button as shown in this figure:
+   4.The detected HFO events are shown graphically in the upper area, highlighted in red within the unfiltered signals, and in the bottom graph, indicated by their start and end times. Additionally, detection results (HFOs and their features) can be displayed numerically by clicking on the 'Detection Results' button, as shown in this figure:
    
  ![image](https://github.com/user-attachments/assets/46528472-507f-46b3-84d4-65db2bbe5170)
    
