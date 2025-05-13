@@ -7,7 +7,7 @@ Keywords: Epilepsy, HFOs, detection, verification and checking, features, brain 
 The process of reliable detection and brain mapping of High-Frequency Oscillation (HFO) features in epilepsy involves four main stages:
 Stage 1 – EEG data reading.
 Stage 2 – HFO detection method selection.
-Stage 3 – Manual verification and validation of relevant detected HFO results.
+Stage 3 – Rapid manual verification and validation of relevant detected HFO results.
 Stage 4 – Mapping of HFO features.
 A simplified flowchart illustrating the processes integrated into our software is shown in the figure below.
 ![image](https://github.com/user-attachments/assets/a152e8fd-6790-4ee6-8850-05741ab6f6dd)
