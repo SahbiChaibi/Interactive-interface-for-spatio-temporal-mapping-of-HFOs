@@ -31,9 +31,18 @@ for ii=1:1:length(TABD)
 end 
     
 
-% clear posdebhfo
-% clear posfinhfo 
-% posdebhfo=TABD;
-% posfinhfo=TABF;
+clear posdebhfo
+clear posfinhfo 
+posdebhfo=TABD;
+posfinhfo=TABF;
+clear Occurane;
+clear powerr;
+clear DurationHFO;
+clear frequencyy;
+Occurane=Occuranee
+powerr=powerrr
+DurationHFO=DurationHFOO
+frequencyy=frequencyyy
+
 % 
 % save resull posdebhfo posfinhfo
