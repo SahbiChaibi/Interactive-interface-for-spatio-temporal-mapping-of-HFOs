@@ -65,7 +65,7 @@ There is an inherent tradeoff between the correct detection rate and the false d
    ![image](https://github.com/user-attachments/assets/95c52f5e-1c8a-4298-ab77-93518a889e4d)
    
 4. In the case of spurious HFOs, they can be discarded using the 'Delete' buttons in the right colum.
-![image](https://github.com/user-attachments/assets/b6159239-aaaa-4cad-9029-86c858821806)
+![image](https://github.com/user-attachments/assets/9aa8d356-1ad4-457d-bdbd-cf51adce14e7)
 ![image](https://github.com/user-attachments/assets/6e5319a6-948e-403e-bb06-93673112af36)
 
 ## Stage 4 – Mapping of HFO features
