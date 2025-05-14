@@ -72,11 +72,15 @@ There is an inherent tradeoff between the correct detection rate and the false d
 
 Clinicians and researchers study cerebral connectivity to understand brain dysfunctions leading to epilepsy, which is why mapping HFOs is considered an important task.
 In our case, we selected the most commonly reported HFO characteristics as a preliminary test for the current GUI version of brain mapping: average frequency, duration, inter-duration, and power metrics.
-1. Pressing the “Mapping of HFOs” button closes the current figure and opens another GUI dedicated to HFO mapping, as shown in Fig. 4. In the current version, contact coordinates must be defined manually (automatic loading will be available in the next update).
+1. Pressing the “Mapping of HFOs” button closes the current figure and opens another GUI dedicated to HFO mapping, as shown below. In the current version, contact coordinates must be defined manually (automatic loading will be available in the next update).
 
 ![image](https://github.com/user-attachments/assets/13edbedc-15d9-4e9d-8846-630a2a71dc02)
 
+2. HFO features mapping can be performed using two complementary methods: histograms and animated spatio-temporal brain mapping.
+Histograms provide a static but clear visualization of HFO characteristics—such as frequency, duration, inter-duration, and power—across electrodes and time.
+Animated spatio-temporal mapping, on the other hand, dynamically illustrates how these features evolve across different brain regions and clinical stages.
 
+3. Future work will explore topographic interpolation around electrode contacts to create continuous brain maps from discrete HFO values, similar to the approach used in the study by Alkawadri et al. (2014): Rafeed Alkawadri, Nicolas Gaspard, Irina I. Goncharova, Dennis D. Spencer, Jason L. Gerrard, Hitten Zaveri, Robert B. Duckrow, Hal Blumenfeld, and Lawrence J. Hirsch. The spatial and signal characteristics of physiological high-frequency oscillations. Epilepsia, 55(12): 1986-95, doi: 10.1111/epi.12851.
 
 # Launch HFOsMap
 You can start the project by running the Main.m file in the root directory. This loads the GUI settings. 
