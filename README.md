@@ -81,13 +81,14 @@ Histograms provide a static but clear visualization of HFO characteristics—suc
 Animated spatio-temporal mapping, on the other hand, dynamically illustrates how these features evolve across different brain regions and clinical stages.
 
 3. Future work will explore topographic interpolation around electrode contacts to create continuous brain maps from discrete HFO values, similar to the approach used in the study by Alkawadri et al. (2014): Rafeed Alkawadri, Nicolas Gaspard, Irina I. Goncharova, Dennis D. Spencer, Jason L. Gerrard, Hitten Zaveri, Robert B. Duckrow, Hal Blumenfeld, and Lawrence J. Hirsch. The spatial and signal characteristics of physiological high-frequency oscillations. Epilepsia, 55(12): 1986-95, doi: 10.1111/epi.12851.
-
+# Requirements & Libraries
+  Matlab 2014b
+  
 # Launch HFOsMap
 You can start the project by running the Main.m file in the root directory. This loads the GUI settings. 
 ## Data availability
 The intracranial EEG dataset used in this study for experiment test is exclusively restricted to the Montreal Neurological Institute and Hospital (Canada) to protect patients’ privacy and confidentiality.
 The dataset used in this project is referred to as ppp.mat, which includes a variable named #allData# that contains data from all EEG electrodes.
-
 
 
 
