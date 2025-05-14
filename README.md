@@ -70,6 +70,10 @@ There is an inherent tradeoff between the correct detection rate and the false d
 
 ## Stage 4 – Mapping of HFO features
 
+Clinicians and researchers study cerebral connectivity to understand brain dysfunctions leading to epilepsy, which is why mapping HFOs is considered an important task.
+In our case, we selected the most commonly reported HFO characteristics as a preliminary test for the current GUI version of brain mapping: average frequency, duration, inter-duration, and power metrics.
+1. Pressing the “Mapping of HFOs” button closes the current figure and opens another GUI dedicated to HFO mapping, as shown in Fig. 4. In the current version, contact coordinates must be defined manually (automatic loading will be available in the next update).
+
 ![image](https://github.com/user-attachments/assets/13edbedc-15d9-4e9d-8846-630a2a71dc02)
 
 
@@ -78,7 +82,8 @@ There is an inherent tradeoff between the correct detection rate and the false d
 You can start the project by running the Main.m file in the root directory. This loads the GUI settings. 
 ## Data availability
 The intracranial EEG dataset used in this study for experiment test is exclusively restricted to the Montreal Neurological Institute and Hospital (Canada) to protect patients’ privacy and confidentiality.
-The dataset used in this project is referred to as ppp.mat, which includes a variable named allEEG that contains data from all EEG electrodes.
+The dataset used in this project is referred to as ppp.mat, which includes a variable named #allData# that contains data from all EEG electrodes.
+
 
 
 
