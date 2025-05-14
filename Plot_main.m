@@ -114,7 +114,7 @@ if(MMNN==0)
             GUI_suiv = uicontrol('Style', 'pushbutton' , 'String','Repeat', 'Value', 1, 'Position', [10 10 70 25],'BackgroundColor',[1 0 0 ],...
             'Callback','delete(GUI_RES)');
         GUI.execute= uicontrol(gcf,'style','pushbutton', 'position',[840 10 100 25], 'string', 'Execute ', 'BackgroundColor',[1 0 0 ],.....
-            'Callback','delete(GUI_RES), [posdebhfo, posfinhfo,matt,xx,Occuranee,powerrr,DurationHFOO,frequencyyy] = conversion(TABDEL, posdebhfo, posfinhfo,zz,electrode,x,xx,Occurane,powerr,DurationHFO,frequencyy),enreg');
+            'Callback','delete(GUI_RES), [posdebhfo, posfinhfo,matt,xx,Occuranee,powerrr,DurationHFOO,frequencyyy] = conversion(TABDEL, posdebhfo, posfinhfo,zz,electrode,x,xx,Occurane,powerr,DurationHFO,frequencyy),MMNN=1,enreg');
         end
         nnn=0;
          zz=length(x);
@@ -131,22 +131,22 @@ if(MMNN==0)
             delete(GUI_RES)
         else
             GUI.execute= uicontrol(gcf,'style','pushbutton', 'position',[440 30 80 35], 'string', 'Execute ', 'BackgroundColor',[1 0 0 ],.....
-            'Callback','delete(GUI_RES), [posdebhfo, posfinhfo,matt,xx,Occuranee,powerrr,DurationHFOO,frequencyyy] = conversion(TABDEL, posdebhfo, posfinhfo,zz,electrode,x,xx,Occurane,powerr,DurationHFO,frequencyy),enreg');
+            'Callback','delete(GUI_RES), [posdebhfo, posfinhfo,matt,xx,Occurane,powerr,DurationHFO,frequencyy] = conversion(TABDEL, posdebhfo, posfinhfo,zz,electrode,x,xx,Occurane,powerr,DurationHFO,frequencyy),MMNN=1,enreg');
         end
            end
          end
 end
         if(MMNN==1)
        mm=420;
-        TABDEL1 =[];
+        TABDEL =[];
         GUI.show= [];
         GUI.del = [];
         ddd=length(posdebhfo)
         nombre=fix(ddd/17);
         CLASSS=zeros(1,ddd);
         if(ddd<18)
-            qqqq;
-            yyyy;
+            qqq;
+            ooooo;
         end
             
      nnn=0;
@@ -154,8 +154,8 @@ end
         if(ddd>17)
            for ijj=1:nombre+1
                mm=420;
-            qqqq;
-            yyy;
+               qqq;
+               ooo;
             
     if(ijj<nombre+1)
             pause
